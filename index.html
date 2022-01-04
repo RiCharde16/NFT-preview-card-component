@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | NFT preview card component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution {
+      position: relative;
+      top: 50px;
+      box-sizing: border-box;
+      padding: 5px;
+      font-size: 11px; 
+      text-align: center; 
+    }
+    .attribution a { 
+      color: hsl(228, 45%, 44%); 
+    }
+    body{
+      background-color: #0d1a2d;
+      padding: 50px 0px;
+    }
+    section{
+      display: flex;
+      justify-content: center;
+    }
+    *{
+      color: white;
+      padding: 0;
+      margin:0;
+    }
+    #box{
+      position: relative;
+      width: 300px;
+      height: 530px;
+      background-color:#15273f;
+      border-radius: 10px;
+      padding:15px;
+      box-shadow: 0px 20px 1px 13px #0c1729;
+    }
+    #box_shadow{
+      background-color: #0c1729;
+      opacity: 50%;
+      border-radius: 5%;
+      position: absolute;
+      top: 20px;
+      width: 400px;
+      height: 650px;
+    }
+    h3{
+      color:white;
+      padding: 2px 10px;
+    }
+    h3:hover, .nome:hover{
+      color: #36b6c2;
+      cursor: pointer;
+    }
+    #criador{
+      border-top: solid 1px #455a77;
+      display: flex;
+      padding-top: 15px;
+    }
+    #criador > p{
+      line-height: 35px;
+      padding: 0px 5px;
+    }
+    #img1{
+      border-radius: 5%;
+      align-items: center;
+      margin: 2px 10px;
+      padding: 5px 0px;
+      width: 280px;
+      cursor: pointer;
+    }
+    .box{
+      position: absolute;
+      background-color:#36b6c2;
+      opacity: 50%;
+      top: 22px;
+      left: 25px;
+      width: 280px;
+      border-radius: 5%;
+      height: 282px;
+    }
+    .box:hover:target[id="olho"]{
+      opacity: 100%;
+    }
+    #diamante{
+      font-weight: 600;
+      color: #36b6c2;
+      list-style: url(./images/icon-ethereum.svg);
+      margin: 0px 20px;
+    }
+    #diamante + li{
+      list-style: url(./images/icon-clock.svg);
+    }
+    #avatar{
+      width:35px;
+      height: 35px;
+      border: 1px solid white;
+      border-radius: 50%;
+    }
+    h3 + p{
+      padding: 15px 10px;
+    }
+    ul{
+      display: flex;
+      padding: 0px 0px;
+      justify-content: space-between;
+      padding-top: 15px;
+    }
+    .cor_texto{
+      /* padding-top: px; */
+      color:#455a77;
+    }
+    #visao{
+      opacity: 0%;
+      cursor: pointer;
+      transition: ease-in-out 0.5s;
+    }
+    #visao:hover{
+      opacity: 100%;
+    }
+    #olho{
+      position: absolute;
+      width: 60px;
+      inset: 0;
+      top: 140px;
+      left: 140px;
+    }
+  </style>
+</head>
+<body>  
+<!-- shif + del ira apagar a linha inteira -->
+  <section>
+    <div id="box_shadow">
+    </div>
+    <div id="box">
+      <img src="images/image-equilibrium.jpg" alt="image-equilibrium" id="img1">
+      <div id="visao">
+        <div class="box">
+        </div>
+        <img src="./images/icon-view.svg" id="olho">
+      </div>
+      <h3>Equilibrium #3429</h3>
+      <p class="cor_texto">Our Equilibrium collection promotes</br> balance and calm.</p>
+      <ul>
+        <li id="diamante">0.041 ETH</li>
+          <li class="cor_texto">3 days left</li>
+        </ul>
+      
+        <div id="criador">
+          <img src="images/image-avatar.png" alt="avatar" id="avatar">
+          <p><span class="cor_texto">Creation of</span> <span class="nome">Jules Wyvern</span>
+          </p>
+        </div>
+    </div>
+  </section>
+
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://github.com/RiCharde16" target="_blank">Richard16</a>.
+  </footer>
+</body>
+</html>
